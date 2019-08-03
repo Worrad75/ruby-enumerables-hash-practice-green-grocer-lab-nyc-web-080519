@@ -12,26 +12,26 @@ def consolidate_cart(cart)    #this cart is an array of hashes
 end
     
 
-def apply_coupons(cart, coupons)
+# def apply_coupons(cart, coupons)
   
-  coupons.each do |coupon_hash|
-    coupon_hash.each do |att, val|
-      name = coupon_hash[:item]
+#   coupons.each do |coupon_hash|
+#     coupon_hash.each do |att, val|
+#       name = coupon_hash[:item]
       
-      if cart[name] && cart[name][:count] >= coupon_hash[:num]
-        if cart["#{name} W/COUPON"]
-          cart["#{name} W/COUPON"][:count] += 1
-        else
-          cart["#{name} W/COUPON"] = {:price=>coupon_hash[:cost],
-          :clearence=>cart[name][:clearance], :count=>1}
-        end
+#       if cart[name] && cart[name][:count] >= coupon_hash[:num]
+#         if cart["#{name} W/COUPON"]
+#           cart["#{name} W/COUPON"][:count] += 1
+#         else
+#           cart["#{name} W/COUPON"] = {:price=>coupon_hash[:cost],
+#           :clearence=>cart[name][:clearance], :count=>1}
+#         end
         
-        cart[name][:count] -= coupon_hash[:num]
-      end
-    end
-  end
-  cart
-end
+#         cart[name][:count] -= coupon_hash[:num]
+#       end
+#     end
+#   end
+#   cart
+# end
 
 
 
