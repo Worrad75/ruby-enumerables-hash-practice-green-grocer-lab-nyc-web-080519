@@ -1,17 +1,18 @@
 def consolidate_cart(cart)    #this cart is an array of hashes
-  consolidated = { }
-  cart.each do |(key, value)|
-    
+  organized_cart = {}
+  count = 0
+  cart.each do |element|
+    element.each do |fruit, hash|
+      organized_cart[fruit] ||= hash
+      organized_cart[fruit][:count] ||= 0
+      organized_cart[fruit][:count] += 1
+    end
   end
+  return organized_cart
 end
     
     
-   
-   
-   
-   
-   
-   
+
    
    
 
