@@ -18,11 +18,15 @@ def apply_coupons(cart, coupons)
     coupon_hash.each do |att, val|
       name = coupon_hash[:item]
       
+      # IF WE HAVE A COUPON THAT MATCHES AN ITEM IN-CART...
       if cart[name] && cart[name][:count] >= coupon_hash[:num]
+        
+        # ... AND ITS ALREADY BEEN APPLIED
         if cart["#{name} W/COUPON"]
           cart["#{name} W/COUPON"][:count] += 1
-        else
-          cart["#{name} W/COUPON"] = {:price=>coupon_hash[:cost], :clearence=>cart[name][:clearance], 
+          
+        else      # ... IT HASNT BEEN APPLIED
+          cart["#{name} W/COUPON"] = {:price=>coupon_hash[:cost], :clearence=>cart[name][:clearance], :count=>1}
         end
     end
   end
