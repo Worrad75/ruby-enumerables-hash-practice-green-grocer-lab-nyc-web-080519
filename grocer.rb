@@ -11,10 +11,6 @@ def consolidate_cart(cart)    #this cart is an array of hashes
   compact_cart
 end
     
-    
-
-   
-   
 
 def apply_coupons(cart, coupons)
   # code here
