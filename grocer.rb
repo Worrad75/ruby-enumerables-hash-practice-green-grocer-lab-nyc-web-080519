@@ -17,6 +17,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon_hash|
     coupon_hash.each do |att, val|
       name = coupon_hash[:item]
+      # clearence
       
       if cart[name] && cart[name][:count] >= coupon_hash[:num]
         
