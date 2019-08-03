@@ -50,8 +50,8 @@ def checkout(cart, coupons)
   final_cart = apply_clearance(organized_cart_with_coupons)
   
   total = 0
-  final_cart.each do |item_hash|
-    
+  final_cart.each do |name, item_hash|
+    total += item_hash[:price] * item_hash[:count]
   end
 end
 
