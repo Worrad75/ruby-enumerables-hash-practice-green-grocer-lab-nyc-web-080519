@@ -6,7 +6,7 @@ def consolidate_cart(cart)    #this cart is an array of hashes
     element.each do |item, hash|
       organized_cart[item] ||= hash
       organized_cart[item][:count] ||= 0
-      organized_cart[fruit][:count] += 1
+      organized_cart[item][:count] += 1
     end
   end
   return organized_cart
