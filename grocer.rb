@@ -2,7 +2,6 @@ def consolidate_cart(cart)    #this cart is an array of hashes
   compact_cart = {}
   
   cart.each do |element|
-    # count = 0
     element.each do |item, hash|
       compact_cart[item] ||= hash
       compact_cart[item][:count] ||= 0
