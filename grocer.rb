@@ -49,7 +49,10 @@ def checkout(cart, coupons)
   organized_cart_with_coupons = apply_coupons(organized_cart, coupons)
   final_cart = apply_clearance(organized_cart_with_coupons)
   
-  total = 
+  total = 0
+  final_cart.each do |item_hash|
+    
+  end
 end
 
 
