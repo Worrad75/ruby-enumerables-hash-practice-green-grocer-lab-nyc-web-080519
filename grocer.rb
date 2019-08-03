@@ -2,10 +2,10 @@ def consolidate_cart(cart)    #this cart is an array of hashes
   consolidated = { }
   cart.each do |(key, value)|
     if consolidated.has_key(key)
-      consolidated[key][count] += 1
+      consolidated[value][count] += 1
     else
       consolidated[key] = value
-      consolidated[key][count] = 1
+      consolidated[value][count] = 1
     end
   end
   consolidated
