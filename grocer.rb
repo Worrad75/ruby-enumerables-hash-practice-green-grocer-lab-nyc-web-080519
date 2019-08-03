@@ -28,6 +28,8 @@ def apply_coupons(cart, coupons)
         else      # ... IT HASNT BEEN APPLIED
           cart["#{name} W/COUPON"] = {:price=>coupon_hash[:cost], :clearence=>cart[name][:clearance], :count=>1}
         end
+        
+        cart[name][:count] -= 
     end
   end
   
