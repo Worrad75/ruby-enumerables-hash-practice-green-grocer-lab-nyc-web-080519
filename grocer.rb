@@ -36,9 +36,6 @@ end
 
 
 
-
-
-
 def apply_clearance(cart)
   # code here
 end
