@@ -1,4 +1,4 @@
-def consolidate_cart(cart)    #this cart is an array of hashes
+def consolidate_cart(cart)
   compact_cart = {}
   
   cart.each do |element|
