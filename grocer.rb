@@ -44,22 +44,17 @@ def apply_clearance(cart)
 end
 
 
-# def apply_clearance(cart) 
-#   cart.each do |item, attribute_hash| 
-#     if attribute_hash[:clearance] == true 
-#       attribute_hash[:price] = (attribute_hash[:price] *
-#       0.8).round(2) 
-#     end 
-#   end 
-#   cart 
-# end
-
-
-
-
-
-
-
 def checkout(cart, coupons)
-  # code here
+  organized_cart = consolidate_cart(cart)
+  organized_cart_with_coupons = apply_coupons(organized_cart, coupons)
+  final_cart = apply_clearance(organized_cart_with_coupons)
+  
+  total = 
 end
+
+
+
+
+
+
+
