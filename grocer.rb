@@ -18,7 +18,7 @@ def apply_coupons(cart, coupons)
     coupon_hash.each do |att, val|
       name = coupon_hash[:item]
       
-      if cart[name]
+      if cart[name] && cart[]
     end
   end
   
